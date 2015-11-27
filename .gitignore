@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+Debug/
+.DS_Store
+.qmake.stash

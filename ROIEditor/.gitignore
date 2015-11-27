@@ -1,0 +1,6 @@
+Debug/
+ROIEditor.build/
+Makefile
+moc*
+*.user
+ui_mainwindow.h
