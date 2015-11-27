@@ -8,6 +8,8 @@
 #include <QFileInfo>
 #include <QMessageBox>
 #include <QDir>
+#include <QPainter>
+#include <QStatusBar>
 
 #include "ImageBay.h"
 
@@ -29,11 +31,20 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QStatusBar *statusBar;
     ImageBay imageBay;
 
+    // index for the current image
+    int curImageIndex;
+    QPixmap curImage;
+    
+    // load an image
+    void loadImage(AnnotatedImageFile* aif);
 protected:
     void dragEnterEvent(QDragEnterEvent *);
     void dropEvent(QDropEvent*);
+    
+    void paintEvent(QPaintEvent *);
 };
 
 #endif // MAINWINDOW_H
