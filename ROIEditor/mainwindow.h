@@ -7,9 +7,13 @@
 #include <QMimeData>
 #include <QFileInfo>
 #include <QMessageBox>
+#include <QDir>
+
+#include "ImageBay.h"
 
 class QDragEnterEvent;
 class QDropEvent;
+class QDir;
 
 namespace Ui {
 class MainWindow;
@@ -25,6 +29,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    ImageBay imageBay;
 
 protected:
     void dragEnterEvent(QDragEnterEvent *);

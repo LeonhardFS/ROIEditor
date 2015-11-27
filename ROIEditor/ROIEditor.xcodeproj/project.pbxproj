@@ -5,531 +5,447 @@
 	};
 	objectVersion = 46;
 	objects = {
-		5E618435888B9D49F8540165 = {
+
+/* Begin PBXAggregateTarget section */
+		6D67ADEACA8A35F04F00264F /* Qt Preprocess */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "ROIEditor" */;
+			buildPhases = (
+				5E618435888B9D49F8540165 /* Qt Qmake */,
+				7EF0942E79C014DCEC8976BC /* Qt Preprocessors */,
+			);
+			dependencies = (
+			);
+			name = "Qt Preprocess";
+			productName = "Qt Preprocess";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0B911E1B1C09050C0074981F /* ImageBay.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 0B911E1A1C09050C0074981F /* ImageBay.cpp */; };
+		2027BE26CFB550833DF1106F /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 043BAC90FF7096E670256A74 /* QtGui.framework */; };
+		3DAE6CE29293254E71D9E0E3 /* moc_mainwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A93D6385DF455EDE8A3BB99B /* moc_mainwindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		47A40356087DDB804BBDC102 /* main.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 20D4DD19E38B9BD339AF3185 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = D4B32C2222F82AC56BADEB21 /* OpenGL.framework */; };
+		88D90B82461EA75227E00333 /* mainwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 9C9F452C05B5110E3D4E4A6C /* mainwindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = A1A67BEAA744704B29168D39 /* IOKit.framework */; };
+		A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */; };
+		BB3E330C1E89ABA13E1825FE /* QtCore.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = CD71A69CD9AC47FFF8BC111C /* QtCore.framework */; };
+		D697150DE2C95E872B8A1E44 /* QtWidgets.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = EDDBBA9D40C4A04175E304E2 /* QtWidgets.framework */; };
+		E45E51A644D5FC9F942ECE55 /* AGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B911E181C08FD6F0074981F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DB9C3763D02B1415CD9D565 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D67ADEACA8A35F04F00264F;
+			remoteInfo = "Qt Preprocess";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		043BAC90FF7096E670256A74 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework; sourceTree = "<absolute>"; };
+		0B911E191C08FD910074981F /* ImageBay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBay.h; sourceTree = SOURCE_ROOT; };
+		0B911E1A1C09050C0074981F /* ImageBay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageBay.cpp; sourceTree = SOURCE_ROOT; };
+		20D4DD19E38B9BD339AF3185 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/main.cpp; sourceTree = "<absolute>"; };
+		26812EF185AD3A679A20E0C8 /* ROIEditor.pro */ = {isa = PBXFileReference; lastKnownFileType = text; name = ROIEditor.pro; path = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/ROIEditor.pro; sourceTree = "<absolute>"; };
+		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
+		32F0AD832F3C077AC4C9AB9D /* .qmake.stash */ = {isa = PBXFileReference; lastKnownFileType = text; name = .qmake.stash; path = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/.qmake.stash; sourceTree = "<absolute>"; };
+		4090FB2AA9CB5F4F406E2D29 /* mainwindow.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = mainwindow.ui; path = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/mainwindow.ui; sourceTree = "<absolute>"; };
+		661A0F0315516B508A0CCE4A /* ROIEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROIEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A6194816C15006DF299F99E /* ui_mainwindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_mainwindow.h; path = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/ui_mainwindow.h; sourceTree = "<absolute>"; };
+		8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
+		92B4BE99235353128639060B /* mainwindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mainwindow.h; path = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/mainwindow.h; sourceTree = "<absolute>"; };
+		9C9F452C05B5110E3D4E4A6C /* mainwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mainwindow.cpp; path = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/mainwindow.cpp; sourceTree = "<absolute>"; };
+		A1A67BEAA744704B29168D39 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		A93D6385DF455EDE8A3BB99B /* moc_mainwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_mainwindow.cpp; path = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/moc_mainwindow.cpp; sourceTree = "<absolute>"; };
+		CD71A69CD9AC47FFF8BC111C /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework; sourceTree = "<absolute>"; };
+		D4B32C2222F82AC56BADEB21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		EDDBBA9D40C4A04175E304E2 /* QtWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = /Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1C883685E82D5676953459A /* Link Binary With Libraries */ = {
+			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				);
-			isa = PBXShellScriptBuildPhase;
+				D697150DE2C95E872B8A1E44 /* QtWidgets.framework in Link Binary With Libraries */,
+				2027BE26CFB550833DF1106F /* QtGui.framework in Link Binary With Libraries */,
+				BB3E330C1E89ABA13E1825FE /* QtCore.framework in Link Binary With Libraries */,
+				A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */,
+				8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */,
+				8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */,
+				E45E51A644D5FC9F942ECE55 /* AGL.framework in Link Binary With Libraries */,
+			);
+			name = "Link Binary With Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
-			name = "Qt Qmake";
-			shellPath = "/bin/sh";
-			shellScript = "make -C /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/ -f ROIEditor.xcodeproj/qt_makeqmake.mak";
-			showEnvVarsInLog = "0";
 		};
-		20D4DD19E38B9BD339AF3185 = {
-			isa = PBXFileReference;
-			path = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/main.cpp";
-			name = "main.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		47A40356087DDB804BBDC102 = {
-			fileRef = "20D4DD19E38B9BD339AF3185";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		9C9F452C05B5110E3D4E4A6C = {
-			isa = PBXFileReference;
-			path = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/mainwindow.cpp";
-			name = "mainwindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		88D90B82461EA75227E00333 = {
-			fileRef = "9C9F452C05B5110E3D4E4A6C";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		A93D6385DF455EDE8A3BB99B = {
-			isa = PBXFileReference;
-			path = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/moc_mainwindow.cpp";
-			name = "moc_mainwindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		3DAE6CE29293254E71D9E0E3 = {
-			fileRef = "A93D6385DF455EDE8A3BB99B";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		7A6194816C15006DF299F99E = {
-			isa = PBXFileReference;
-			path = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/ui_mainwindow.h";
-			name = "ui_mainwindow.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		92B4BE99235353128639060B = {
-			isa = PBXFileReference;
-			path = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/mainwindow.h";
-			name = "mainwindow.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		26812EF185AD3A679A20E0C8 = {
-			isa = PBXFileReference;
-			path = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/ROIEditor.pro";
-			name = "ROIEditor.pro";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "text";
-		};
-		32F0AD832F3C077AC4C9AB9D = {
-			isa = PBXFileReference;
-			path = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/.qmake.stash";
-			name = ".qmake.stash";
-			sourceTree = "<absolute>";
-		};
-		4090FB2AA9CB5F4F406E2D29 = {
-			isa = PBXFileReference;
-			path = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/mainwindow.ui";
-			name = "mainwindow.ui";
-			sourceTree = "<absolute>";
-		};
-		BC25D04B15FA7CB8EC1533EB = {
-			fileRef = "4090FB2AA9CB5F4F406E2D29";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		25B08E2869634E9BCBA333A2 = {
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12E908B8A1C3C07C115504F5 /* Sources [uic] */ = {
 			isa = PBXGroup;
 			children = (
-				"A93D6385DF455EDE8A3BB99B",
-				"7A6194816C15006DF299F99E");
-			name = "Generated Sources";
-			sourceTree = "<Group>";
-		};
-		2EB56BE3C2D93CDAB0C52E67 = {
-			isa = PBXGroup;
-			children = (
-				"20D4DD19E38B9BD339AF3185",
-				"9C9F452C05B5110E3D4E4A6C",
-				"92B4BE99235353128639060B");
-			name = "Sources";
-			sourceTree = "<Group>";
-		};
-		12E908B8A1C3C07C115504F5 = {
-			isa = PBXGroup;
-			children = (
-				"4090FB2AA9CB5F4F406E2D29");
+				4090FB2AA9CB5F4F406E2D29 /* mainwindow.ui */,
+			);
 			name = "Sources [uic]";
 			sourceTree = "<Group>";
 		};
-		74B182DB50CB5611B5C1C297 = {
+		25B08E2869634E9BCBA333A2 /* Generated Sources */ = {
 			isa = PBXGroup;
 			children = (
-				"26812EF185AD3A679A20E0C8",
-				"32F0AD832F3C077AC4C9AB9D");
+				A93D6385DF455EDE8A3BB99B /* moc_mainwindow.cpp */,
+				7A6194816C15006DF299F99E /* ui_mainwindow.h */,
+			);
+			name = "Generated Sources";
+			sourceTree = "<Group>";
+		};
+		2EB56BE3C2D93CDAB0C52E67 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				20D4DD19E38B9BD339AF3185 /* main.cpp */,
+				9C9F452C05B5110E3D4E4A6C /* mainwindow.cpp */,
+				92B4BE99235353128639060B /* mainwindow.h */,
+				0B911E191C08FD910074981F /* ImageBay.h */,
+				0B911E1A1C09050C0074981F /* ImageBay.cpp */,
+			);
+			name = Sources;
+			sourceTree = "<Group>";
+		};
+		74B182DB50CB5611B5C1C297 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26812EF185AD3A679A20E0C8 /* ROIEditor.pro */,
+				32F0AD832F3C077AC4C9AB9D /* .qmake.stash */,
+			);
 			name = "Supporting Files";
 			sourceTree = "<Group>";
 		};
-		7EF0942E79C014DCEC8976BC = {
-			buildActionMask = 2147483647;
-			files = (
-				);
-			isa = PBXShellScriptBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Qt Preprocessors";
-			shellPath = "/bin/sh";
-			shellScript = "make -C /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/ -f ROIEditor.xcodeproj/qt_preprocess.mak";
-			showEnvVarsInLog = "0";
-		};
-		F7E50F631C51CD5B5DC0BC43 = {
-			buildActionMask = 2147483647;
-			files = (
-				"47A40356087DDB804BBDC102",
-				"88D90B82461EA75227E00333",
-				"3DAE6CE29293254E71D9E0E3");
-			isa = PBXSourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Compile Sources";
-		};
-		EDDBBA9D40C4A04175E304E2 = {
-			isa = PBXFileReference;
-			name = "QtWidgets.framework";
-			path = "/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		D697150DE2C95E872B8A1E44 = {
-			fileRef = "EDDBBA9D40C4A04175E304E2";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		043BAC90FF7096E670256A74 = {
-			isa = PBXFileReference;
-			name = "QtGui.framework";
-			path = "/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		2027BE26CFB550833DF1106F = {
-			fileRef = "043BAC90FF7096E670256A74";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		CD71A69CD9AC47FFF8BC111C = {
-			isa = PBXFileReference;
-			name = "QtCore.framework";
-			path = "/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		BB3E330C1E89ABA13E1825FE = {
-			fileRef = "CD71A69CD9AC47FFF8BC111C";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		2B774D8E4178765CE52EAAF5 = {
-			isa = PBXFileReference;
-			name = "DiskArbitration.framework";
-			path = "/System/Library/Frameworks/DiskArbitration.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		A99B2AA0F9CBBDD12BA126A4 = {
-			fileRef = "2B774D8E4178765CE52EAAF5";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		A1A67BEAA744704B29168D39 = {
-			isa = PBXFileReference;
-			name = "IOKit.framework";
-			path = "/System/Library/Frameworks/IOKit.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		8D267F2E4776F0ECA2F49DC8 = {
-			fileRef = "A1A67BEAA744704B29168D39";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		D4B32C2222F82AC56BADEB21 = {
-			isa = PBXFileReference;
-			name = "OpenGL.framework";
-			path = "/System/Library/Frameworks/OpenGL.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		8771A8C96E9C391044035D99 = {
-			fileRef = "D4B32C2222F82AC56BADEB21";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		8D9815BDB5BD9F90D2BC05C5 = {
-			isa = PBXFileReference;
-			name = "AGL.framework";
-			path = "/System/Library/Frameworks/AGL.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		E45E51A644D5FC9F942ECE55 = {
-			fileRef = "8D9815BDB5BD9F90D2BC05C5";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		AF39DD055C3EF8226FBE929D = {
-			children = (
-				"EDDBBA9D40C4A04175E304E2",
-				"043BAC90FF7096E670256A74",
-				"CD71A69CD9AC47FFF8BC111C",
-				"2B774D8E4178765CE52EAAF5",
-				"A1A67BEAA744704B29168D39",
-				"D4B32C2222F82AC56BADEB21",
-				"8D9815BDB5BD9F90D2BC05C5");
+		AF39DD055C3EF8226FBE929D /* Frameworks */ = {
 			isa = PBXGroup;
-			name = "Frameworks";
+			children = (
+				EDDBBA9D40C4A04175E304E2 /* QtWidgets.framework */,
+				043BAC90FF7096E670256A74 /* QtGui.framework */,
+				CD71A69CD9AC47FFF8BC111C /* QtCore.framework */,
+				2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */,
+				A1A67BEAA744704B29168D39 /* IOKit.framework */,
+				D4B32C2222F82AC56BADEB21 /* OpenGL.framework */,
+				8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<Group>";
 		};
-		D1C883685E82D5676953459A = {
-			buildActionMask = 2147483647;
-			files = (
-				"D697150DE2C95E872B8A1E44",
-				"2027BE26CFB550833DF1106F",
-				"BB3E330C1E89ABA13E1825FE",
-				"A99B2AA0F9CBBDD12BA126A4",
-				"8D267F2E4776F0ECA2F49DC8",
-				"8771A8C96E9C391044035D99",
-				"E45E51A644D5FC9F942ECE55");
-			isa = PBXFrameworksBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Link Binary With Libraries";
-		};
-		30414803F31797EB689AE508 = {
-			buildActionMask = 2147483647;
-			files = (
-				);
-			isa = PBXResourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Copy Bundle Resources";
-		};
-		661A0F0315516B508A0CCE4A = {
-			isa = PBXFileReference;
-			includeInIndex = 0;
-			explicitFileType = "wrapper.application";
-			path = "ROIEditor.app";
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FE0A091FDBFB3E9C31B7A1BD = {
-			children = (
-				"661A0F0315516B508A0CCE4A");
+		E8C543AB96796ECAA2E65C57 /* ROIEditor */ = {
 			isa = PBXGroup;
-			name = "Products";
+			children = (
+				2EB56BE3C2D93CDAB0C52E67 /* Sources */,
+				25B08E2869634E9BCBA333A2 /* Generated Sources */,
+				74B182DB50CB5611B5C1C297 /* Supporting Files */,
+				12E908B8A1C3C07C115504F5 /* Sources [uic] */,
+				AF39DD055C3EF8226FBE929D /* Frameworks */,
+				FE0A091FDBFB3E9C31B7A1BD /* Products */,
+			);
+			name = ROIEditor;
 			sourceTree = "<Group>";
 		};
-		E8C543AB96796ECAA2E65C57 = {
-			children = (
-				"2EB56BE3C2D93CDAB0C52E67",
-				"25B08E2869634E9BCBA333A2",
-				"74B182DB50CB5611B5C1C297",
-				"12E908B8A1C3C07C115504F5",
-				"AF39DD055C3EF8226FBE929D",
-				"FE0A091FDBFB3E9C31B7A1BD");
+		FE0A091FDBFB3E9C31B7A1BD /* Products */ = {
 			isa = PBXGroup;
-			name = "ROIEditor";
+			children = (
+				661A0F0315516B508A0CCE4A /* ROIEditor.app */,
+			);
+			name = Products;
 			sourceTree = "<Group>";
 		};
-		6D67ADEACA8A35F04F00264F = {
-			buildPhases = (
-				"5E618435888B9D49F8540165",
-				"7EF0942E79C014DCEC8976BC");
-			dependencies = (
-				);
-			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
-			isa = PBXAggregateTarget;
-			buildRules = (
-);
-			productName = "Qt Preprocess";
-			name = "Qt Preprocess";
-		};
-		CA73B320E10126A6C122DA5D = {
-			isa = PBXTargetDependency;
-			target = "6D67ADEACA8A35F04F00264F";
-		};
-		9792C598E45365F3D37061C6 = {
-			buildPhases = (
-				"F7E50F631C51CD5B5DC0BC43",
-				"D1C883685E82D5676953459A",
-				"30414803F31797EB689AE508");
-			dependencies = (
-				"CA73B320E10126A6C122DA5D");
-			productReference = "661A0F0315516B508A0CCE4A";
-			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9792C598E45365F3D37061C6 /* ROIEditor */ = {
 			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "ROIEditor" */;
+			buildPhases = (
+				F7E50F631C51CD5B5DC0BC43 /* Compile Sources */,
+				D1C883685E82D5676953459A /* Link Binary With Libraries */,
+				30414803F31797EB689AE508 /* Copy Bundle Resources */,
+			);
 			buildRules = (
-);
+			);
+			dependencies = (
+				CA73B320E10126A6C122DA5D /* PBXTargetDependency */,
+			);
+			name = ROIEditor;
+			productName = ROIEditor;
+			productReference = 661A0F0315516B508A0CCE4A /* ROIEditor.app */;
 			productType = "com.apple.product-type.application";
-			name = "ROIEditor";
-			productName = "ROIEditor";
 		};
-		3AA6C32AC930069E80220CF1 = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = "NO";
-				ENABLE_BITCODE = "NO";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = "YES";
-				GCC_OPTIMIZATION_LEVEL = "0";
-				PRODUCT_NAME = "ROIEditor";
-				QT_LIBRARY_SUFFIX = "_debug";
-				SDKROOT = "macosx";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
-				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
-				INFOPLIST_FILE = "Info.plist";
-				SYMROOT = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/";
-				DYLIB_CURRENT_VERSION = "1.0.0";
-				DYLIB_COMPATIBILITY_VERSION = "1.0";
-				MACOSX_DEPLOYMENT_TARGET = "10.7";
-				HEADER_SEARCH_PATHS = (
-					".",
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers",
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers",
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers",
-					".",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AGL.framework/Headers",
-					".",
-					"/Users/LeonhardS/Qt/5.5/clang_64/mkspecs/macx-clang");
-				LIBRARY_SEARCH_PATHS = (
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib",
-					"/System/Library/Frameworks/");
-				FRAMEWORK_SEARCH_PATHS = (
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib",
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib");
-				OTHER_CFLAGS = (
-					"-pipe",
-					"-O2",
-					"-Wall",
-					"-W",
-					"-fPIC",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_CPLUSPLUSFLAGS = (
-					"-pipe",
-					"-O2",
-					"-Wall",
-					"-W",
-					"-fPIC",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_LDFLAGS = (
-						"-headerpad_max_install_names",
-						"-Wl,-rpath,/Users/LeonhardS/Qt/5.5/clang_64/lib",
-						"-F/Users/LeonhardS/Qt/5.5/clang_64/lib");
-				ARCHS = "x86_64";
-			};
-			name = "Debug";
-		};
-		77418F46922677BB04ED38DD = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = "NO";
-				ENABLE_BITCODE = "NO";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = "YES";
-				GCC_OPTIMIZATION_LEVEL = "0";
-				PRODUCT_NAME = "ROIEditor";
-				QT_LIBRARY_SUFFIX = "_debug";
-				SDKROOT = "macosx";
-				PRODUCT_NAME = "ROIEditor";
-			};
-			name = "Debug";
-		};
-		339EE1B2CC4FC24589A0EA95 = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = "YES";
-				ENABLE_BITCODE = "NO";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = "NO";
-				PRODUCT_NAME = "ROIEditor";
-				QT_LIBRARY_SUFFIX = "";
-				SDKROOT = "macosx";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
-				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
-				INFOPLIST_FILE = "Info.plist";
-				SYMROOT = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/";
-				DYLIB_CURRENT_VERSION = "1.0.0";
-				DYLIB_COMPATIBILITY_VERSION = "1.0";
-				MACOSX_DEPLOYMENT_TARGET = "10.7";
-				HEADER_SEARCH_PATHS = (
-					".",
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers",
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers",
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers",
-					".",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AGL.framework/Headers",
-					".",
-					"/Users/LeonhardS/Qt/5.5/clang_64/mkspecs/macx-clang");
-				LIBRARY_SEARCH_PATHS = (
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib",
-					"/System/Library/Frameworks/");
-				FRAMEWORK_SEARCH_PATHS = (
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib",
-					"/Users/LeonhardS/Qt/5.5/clang_64/lib");
-				OTHER_CFLAGS = (
-					"-pipe",
-					"-O2",
-					"-Wall",
-					"-W",
-					"-fPIC",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_CPLUSPLUSFLAGS = (
-					"-pipe",
-					"-O2",
-					"-Wall",
-					"-W",
-					"-fPIC",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_LDFLAGS = (
-						"-headerpad_max_install_names",
-						"-Wl,-rpath,/Users/LeonhardS/Qt/5.5/clang_64/lib",
-						"-F/Users/LeonhardS/Qt/5.5/clang_64/lib");
-				ARCHS = "x86_64";
-			};
-			name = "Release";
-		};
-		6666AA5E688052234F6758D8 = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = "YES";
-				ENABLE_BITCODE = "NO";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = "NO";
-				PRODUCT_NAME = "ROIEditor";
-				QT_LIBRARY_SUFFIX = "";
-				SDKROOT = "macosx";
-				PRODUCT_NAME = "ROIEditor";
-			};
-			name = "Release";
-		};
-		DAC4C1AA5EDEA1C85E9CA5E6 = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				"3AA6C32AC930069E80220CF1",
-				"339EE1B2CC4FC24589A0EA95");
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release";
-		};
-		6CC3B5D2136C7CD6A5CF5A59 = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				"77418F46922677BB04ED38DD",
-				"6666AA5E688052234F6758D8");
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release";
-		};
-		6DB9C3763D02B1415CD9D565 = {
-			hasScannedForEncodings = 1;
-			compatibilityVersion = "Xcode 3.2";
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DB9C3763D02B1415CD9D565 /* Project object */ = {
 			isa = PBXProject;
-			mainGroup = "E8C543AB96796ECAA2E65C57";
-			productRefGroup = "FE0A091FDBFB3E9C31B7A1BD";
-			buildConfigurationList = "DAC4C1AA5EDEA1C85E9CA5E6";
+			attributes = {
+			};
+			buildConfigurationList = DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "ROIEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E8C543AB96796ECAA2E65C57 /* ROIEditor */;
+			productRefGroup = FE0A091FDBFB3E9C31B7A1BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"9792C598E45365F3D37061C6",
-				"6D67ADEACA8A35F04F00264F");
-			attributes = {
-				TargetAttributes = {
-				};
-			};
+				9792C598E45365F3D37061C6 /* ROIEditor */,
+				6D67ADEACA8A35F04F00264F /* Qt Preprocess */,
+			);
 		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30414803F31797EB689AE508 /* Copy Bundle Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Copy Bundle Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E618435888B9D49F8540165 /* Qt Qmake */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Qmake";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/ -f ROIEditor.xcodeproj/qt_makeqmake.mak";
+			showEnvVarsInLog = 0;
+		};
+		7EF0942E79C014DCEC8976BC /* Qt Preprocessors */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Preprocessors";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/ -f ROIEditor.xcodeproj/qt_preprocess.mak";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7E50F631C51CD5B5DC0BC43 /* Compile Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B911E1B1C09050C0074981F /* ImageBay.cpp in Compile Sources */,
+				47A40356087DDB804BBDC102 /* main.cpp in Compile Sources */,
+				88D90B82461EA75227E00333 /* mainwindow.cpp in Compile Sources */,
+				3DAE6CE29293254E71D9E0E3 /* moc_mainwindow.cpp in Compile Sources */,
+			);
+			name = "Compile Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA73B320E10126A6C122DA5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D67ADEACA8A35F04F00264F /* Qt Preprocess */;
+			targetProxy = 0B911E181C08FD6F0074981F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		339EE1B2CC4FC24589A0EA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/LeonhardS/Qt/5.5/clang_64/lib,
+					/Users/LeonhardS/Qt/5.5/clang_64/lib,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					.,
+					/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers,
+					/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers,
+					/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AGL.framework/Headers,
+					.,
+					"/Users/LeonhardS/Qt/5.5/clang_64/mkspecs/macx-clang",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				LIBRARY_SEARCH_PATHS = (
+					/Users/LeonhardS/Qt/5.5/clang_64/lib,
+					/System/Library/Frameworks/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,/Users/LeonhardS/Qt/5.5/clang_64/lib",
+					"-F/Users/LeonhardS/Qt/5.5/clang_64/lib",
+				);
+				PRODUCT_NAME = ROIEditor;
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+				SYMROOT = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/;
+			};
+			name = Release;
+		};
+		3AA6C32AC930069E80220CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/LeonhardS/Qt/5.5/clang_64/lib,
+					/Users/LeonhardS/Qt/5.5/clang_64/lib,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					.,
+					/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers,
+					/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers,
+					/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AGL.framework/Headers,
+					.,
+					"/Users/LeonhardS/Qt/5.5/clang_64/mkspecs/macx-clang",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				LIBRARY_SEARCH_PATHS = (
+					/Users/LeonhardS/Qt/5.5/clang_64/lib,
+					/System/Library/Frameworks/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,/Users/LeonhardS/Qt/5.5/clang_64/lib",
+					"-F/Users/LeonhardS/Qt/5.5/clang_64/lib",
+				);
+				PRODUCT_NAME = ROIEditor;
+				QT_LIBRARY_SUFFIX = _debug;
+				SDKROOT = macosx;
+				SYMROOT = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/;
+			};
+			name = Debug;
+		};
+		6666AA5E688052234F6758D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = ROIEditor;
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		77418F46922677BB04ED38DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = ROIEditor;
+				QT_LIBRARY_SUFFIX = _debug;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "ROIEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77418F46922677BB04ED38DD /* Debug */,
+				6666AA5E688052234F6758D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "ROIEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA6C32AC930069E80220CF1 /* Debug */,
+				339EE1B2CC4FC24589A0EA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
 	};
-	rootObject = "6DB9C3763D02B1415CD9D565";
+	rootObject = 6DB9C3763D02B1415CD9D565 /* Project object */;
 }
