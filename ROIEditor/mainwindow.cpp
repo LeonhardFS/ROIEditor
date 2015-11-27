@@ -18,6 +18,7 @@ ui(new Ui::MainWindow)
     setMinimumSize(350, 250);
     
     statusImageInfo();
+    roiDragEvent = false;
 }
 
 MainWindow::~MainWindow()
@@ -146,5 +147,37 @@ void MainWindow::paintEvent(QPaintEvent *event) {
         painter.setFont(font);
         painter.drawText(rrect, Qt::AlignCenter, "Drop image\n files here");
     }
+}
+
+void MainWindow::mousePressEvent(QMouseEvent *event) {
+    if(event->buttons() & Qt::LeftButton) {
+        
+        QPointF pos = event->localPos();
+        mouse_x = pos.x();
+        mouse_y = pos.y();
+        // check if the press occured inside the ROI
+        if (imageBay.get(curImageIndex)->ROI.containsPoint(mouse_x, mouse_y)) {
+            roiDragEvent = true;
+        }
+        
+    }
+}
+
+void MainWindow::mouseMoveEvent(QMouseEvent *event) {
+    
+    // update roi pos based on current offset
+    if(roiDragEvent) {
+        QPointF pos = event->localPos();
+        
+        imageBay.get(curImageIndex)->clampedUpdate(pos.x() - mouse_x,
+                                                   pos.y() - mouse_y);
+        mouse_x = pos.x();
+        mouse_y = pos.y();
+        update();
+    }
+}
+
+void MainWindow::mouseReleaseEvent(QMouseEvent *event) {
+    roiDragEvent = false;
 }
 

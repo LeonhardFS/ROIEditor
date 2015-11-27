@@ -25,6 +25,16 @@ public:
     RegionOfInterest():x(0), y(0), w(0), h(0) {}
     RegionOfInterest(const RegionOfInterest& roi):x(roi.x), y(roi.y), w(roi.w), h(roi.h) {}
     RegionOfInterest(const T _x, const T _y, const T _w, const T _h):x(_x), y(_y), w(_w), h(_h) {}
+    
+    inline bool containsPoint(const T px, const T py) {
+        if(px > x + w)return false;
+        if(py > y + h)return false;
+        if(px < x) return false;
+        if(py < y)return false;
+        return true;
+    }
+    
+    
 };
 
 template<typename T> class PointOfInterest {
@@ -33,10 +43,24 @@ public:
 };
 
 // hold the file name and its annotations
-struct AnnotatedImageFile {
+class AnnotatedImageFile {
 public:
     QString sFileName;
+    unsigned int width, height;
     RegionOfInterest<double> ROI;
+    
+    // make sure the update does not push the ROI out of the image
+    inline void clampedUpdate(double updateX, double updateY) {
+        double new_x = ROI.x + updateX;
+        double new_y = ROI.y + updateY;
+        
+        // clamp it
+        new_x = max(0., min(width - ROI.w, new_x));
+        new_y = max(0., min(height - ROI.h, new_y));
+        
+        ROI.x = new_x;
+        ROI.y = new_y;
+    }
 };
 
 // stores a selection of image files with their corresponding regions of interest

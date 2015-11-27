@@ -41,6 +41,9 @@ void ImageBay::addFile(const QString sFileName) {
     
     aif->ROI = RegionOfInterest<double>(w / 2. - DEFAULT_ROI_SIZE/2., h / 2. - DEFAULT_ROI_SIZE / 2., DEFAULT_ROI_SIZE, DEFAULT_ROI_SIZE);
     
+    aif->width = w;
+    aif->height = h;
+    
     // add to list
     Images.push_back(aif);
 }
