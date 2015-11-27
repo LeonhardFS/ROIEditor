@@ -8,6 +8,10 @@
 
 #include "ImageBay.h"
 
+
+// 128px default ROI size
+#define DEFAULT_ROI_SIZE 128
+
 // delete all allocated space
 void ImageBay::cleanUp() {
     if(!Images.empty())
@@ -27,6 +31,15 @@ void ImageBay::addFile(const QString sFileName) {
     AnnotatedImageFile * aif = new AnnotatedImageFile;
     
     aif->sFileName = sFileName;
+    
+    
+    // per default set the ROI to the center
+    QImage img;
+    img.load(sFileName);
+    double w = img.size().width();
+    double h = img.size().height();
+    
+    aif->ROI = RegionOfInterest<double>(w / 2. - DEFAULT_ROI_SIZE/2., h / 2. - DEFAULT_ROI_SIZE / 2., DEFAULT_ROI_SIZE, DEFAULT_ROI_SIZE);
     
     // add to list
     Images.push_back(aif);

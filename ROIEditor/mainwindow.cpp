@@ -99,6 +99,26 @@ void MainWindow::paintEvent(QPaintEvent *event) {
     if(imageBay.count() > 0) {
         // draw image
         painter.drawPixmap(QPoint(0., 0.), curImage);
+        
+        // draw the region of interst on top
+        RegionOfInterest<double> roi = imageBay.get(curImageIndex)->ROI;
+        
+        QPen redPen;
+        redPen.setWidth(2.0);
+        redPen.setBrush(QColor(254, 178, 76));
+        redPen.setCapStyle(Qt::RoundCap);
+        redPen.setJoinStyle(Qt::RoundJoin);
+        painter.setPen(redPen);
+        painter.setOpacity(0.8);
+        painter.drawRect(QRectF(roi.x, roi.y, roi.w, roi.h));
+        // draw diagonals
+        painter.setOpacity(0.2);
+        painter.drawLine(roi.x, roi.y, roi.x + roi.w, roi.y + roi.h);
+        painter.drawLine(roi.x, roi.y + roi.h, roi.x + roi.w, roi.y);
+        // draw halflines
+        painter.setOpacity(0.5);
+        painter.drawLine(roi.x + roi.w / 2., roi.y, roi.x + roi.w / 2., roi.y + roi.h);
+        painter.drawLine(roi.x, roi.y + roi.h / 2., roi.x + roi.w, roi.y + roi.h / 2.);
     }
     // no images yet loaded?
     else {
