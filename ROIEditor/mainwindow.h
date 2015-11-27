@@ -40,6 +40,9 @@ private:
     
     // load an image
     void loadImage(AnnotatedImageFile* aif);
+    
+    // update Status Bar with current Image
+    void statusImageInfo();
 protected:
     void dragEnterEvent(QDragEnterEvent *);
     void dropEvent(QDropEvent*);
