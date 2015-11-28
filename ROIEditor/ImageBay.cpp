@@ -34,8 +34,8 @@ void ImageBay::addFile(const QString sFileName) {
     
     
     // per default set the ROI to the center
-    QImage img;
-    img.load(sFileName);
+    // use QT Image reader to speed up the process
+    QImageReader img(sFileName);
     double w = img.size().width();
     double h = img.size().height();
     
@@ -49,9 +49,14 @@ void ImageBay::addFile(const QString sFileName) {
 }
 
 // add whole directory to list
-void ImageBay::addDirectory(const QDir &dir) {
+void ImageBay::addDirectory(const QString &sDir) {
+    QDir dir(sDir);
+    
+    // include not the special dirs . and ..
+    QFileInfoList fil = dir.entryInfoList(QDir::NoDotAndDotDot|QDir::AllEntries);
+    
     // iterate over files and directories...
-    QFileInfoList fil = dir.entryInfoList();
+    if(!fil.empty())
     for (QList<QFileInfo>::iterator it = fil.begin();it != fil.end(); ++it) {
         QFileInfo fileInfo = *it;
         if(fileInfo.isFile()) {
@@ -59,10 +64,10 @@ void ImageBay::addDirectory(const QDir &dir) {
             if (ImageBay::isImageFileExt(fileInfo.suffix()))
                 addFile(fileInfo.absoluteFilePath());
         }
-            else {
-                if(fileInfo.isDir())
-                    addDirectory(fileInfo.absoluteDir());
-            }
+        else {
+            if(fileInfo.isDir())
+                addDirectory(fileInfo.absolutePath());
+        }
     }
 }
 

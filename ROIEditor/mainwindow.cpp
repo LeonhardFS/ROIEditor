@@ -51,7 +51,7 @@ void MainWindow::dropEvent(QDropEvent *event) {
         }
         else {
             if(fileInfo.isDir())
-                imageBay.addDirectory(fileInfo.absoluteDir());
+                imageBay.addDirectory(fileInfo.absolutePath());
         }
     }
     event->acceptProposedAction();
@@ -150,17 +150,22 @@ void MainWindow::paintEvent(QPaintEvent *event) {
 }
 
 void MainWindow::mousePressEvent(QMouseEvent *event) {
-    if(event->buttons() & Qt::LeftButton) {
-        
-        QPointF pos = event->localPos();
-        mouse_x = pos.x();
-        mouse_y = pos.y();
-        // check if the press occured inside the ROI
-        if (imageBay.get(curImageIndex)->ROI.containsPoint(mouse_x, mouse_y)) {
-            roiDragEvent = true;
+    
+    // only when application is in ImageState
+    if(imageBay.count() > 0) {
+        if(event->buttons() & Qt::LeftButton) {
+            
+            QPointF pos = event->localPos();
+            mouse_x = pos.x();
+            mouse_y = pos.y();
+            // check if the press occured inside the ROI
+            if (imageBay.get(curImageIndex)->ROI.containsPoint(mouse_x, mouse_y)) {
+                roiDragEvent = true;
+            }
+            
         }
-        
     }
+
 }
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event) {
@@ -179,5 +184,27 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event) {
 
 void MainWindow::mouseReleaseEvent(QMouseEvent *event) {
     roiDragEvent = false;
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event) {
+    
+    // are images already loaded?
+    if(imageBay.count() > 0) {
+        // goto next image via arrow keys
+        if(event->key() == Qt::Key_Right) {
+            curImageIndex = (curImageIndex + 1) % imageBay.count();
+            loadImage(imageBay.get(curImageIndex));
+            update();
+            statusImageInfo();
+        }
+        
+        if(event->key() == Qt::Key_Left) {
+            curImageIndex = (curImageIndex - 1 + imageBay.count()) % imageBay.count();
+            loadImage(imageBay.get(curImageIndex));
+            update();
+            statusImageInfo();
+        }
+    }
+
 }
 

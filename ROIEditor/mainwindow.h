@@ -58,6 +58,9 @@ protected:
     void mousePressEvent(QMouseEvent*);
     void mouseMoveEvent(QMouseEvent*);
     void mouseReleaseEvent(QMouseEvent*);
+    
+    // used for keyboard input
+    void keyPressEvent(QKeyEvent*);
 };
 
 #endif // MAINWINDOW_H

@@ -14,6 +14,9 @@
 #include <QMessageBox>
 #include <QFileInfo>
 #include <QDir>
+#include <QDirIterator>
+#include <QImageReader>
+#include <QDebug>
 
 using namespace std;
 
@@ -80,7 +83,7 @@ public:
     void addFile(const QString sFileName);
     
     // add directory to ImageBay
-    void addDirectory(const QDir& dir);
+    void addDirectory(const QString& sDir);
     
     // save annotations to file
     void saveToJSON(const QString sFileName);
