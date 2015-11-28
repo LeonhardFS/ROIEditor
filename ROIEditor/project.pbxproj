@@ -61,6 +61,20 @@
 					);
 			};
 		};
+		168B91EDC0DE5E536C11FC15 = {
+			isa = PBXFileReference;
+			path = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/icon.icns";
+			name = "icon.icns";
+			sourceTree = "<absolute>";
+		};
+		1260846929AE4C79DB57C541 = {
+			fileRef = "168B91EDC0DE5E536C11FC15";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
 		A93D6385DF455EDE8A3BB99B = {
 			isa = PBXFileReference;
 			path = "/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/moc_mainwindow.cpp";
@@ -138,6 +152,7 @@
 				"20D4DD19E38B9BD339AF3185",
 				"9C9F452C05B5110E3D4E4A6C",
 				"ECC393595B1A52709C5304DD",
+				"168B91EDC0DE5E536C11FC15",
 				"92B4BE99235353128639060B",
 				"696A35045209BC6088E0A356");
 			name = "Sources";
@@ -308,7 +323,7 @@
 		30414803F31797EB689AE508 = {
 			buildActionMask = 2147483647;
 			files = (
-				);
+				"2A876574DFAC43F8D5501D44");
 			isa = PBXResourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 			name = "Copy Bundle Resources";

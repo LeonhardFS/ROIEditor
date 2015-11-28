@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = ROIEditor
 TEMPLATE = app
-
+ICON = icon.icns
 
 SOURCES += main.cpp\
         mainwindow.cpp \
