@@ -28,5 +28,6 @@
 *.app
 
 Debug/
+Release/
 .DS_Store
 .qmake.stash
