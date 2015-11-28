@@ -20,6 +20,9 @@
 
 using namespace std;
 
+class ImageBay;
+class AnnotatedImageFile;
+
 // rectangular region of interest
 template<typename T> class RegionOfInterest {
 public:
@@ -47,34 +50,35 @@ public:
 
 // hold the file name and its annotations
 class AnnotatedImageFile {
+private:
+    ImageBay *parent;
 public:
+    AnnotatedImageFile(ImageBay *bay):parent(bay) {}
+    
     QString sFileName;
     unsigned int width, height;
     RegionOfInterest<double> ROI;
     
     // make sure the update does not push the ROI out of the image
-    inline void clampedUpdate(double updateX, double updateY) {
-        double new_x = ROI.x + updateX;
-        double new_y = ROI.y + updateY;
-        
-        // clamp it
-        new_x = max(0., min(width - ROI.w, new_x));
-        new_y = max(0., min(height - ROI.h, new_y));
-        
-        ROI.x = new_x;
-        ROI.y = new_y;
-    }
+    void clampedUpdate(double updateX, double updateY);
 };
 
 // stores a selection of image files with their corresponding regions of interest
 class ImageBay {
 private:
     vector<AnnotatedImageFile*> Images;
+    bool changes = false;
     
     // release all allocated memory
     void cleanUp();
+    
+    // alter the change status
+    void notifyChange() {
+        changes = true;
+    }
 public:
-    // destructor
+    ImageBay():changes(false) {}
+    
     ~ImageBay() {
         cleanUp();
     }
@@ -86,10 +90,10 @@ public:
     void addDirectory(const QString& sDir);
     
     // save annotations to file
-    void saveToJSON(const QString sFileName);
+    void saveToCSV(const QString& sFileName);
     
     // load annotations from file
-    void loadFromJSON(const QString sFileName);
+    void loadFromCSV(const QString& sFileName);
     
     // get number of images
     inline unsigned int count() {return Images.size();}
@@ -110,6 +114,11 @@ public:
         if(s.compare("tiff") == 0)return true;
         return false;
     }
+    
+    // has anything changed ?
+    bool changed() {return changes;}
+    
+    friend class AnnotatedImageFile;
     
 };
 

@@ -15,6 +15,7 @@
   </property>
   <widget class="QWidget" name="centralWidget"/>
   <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

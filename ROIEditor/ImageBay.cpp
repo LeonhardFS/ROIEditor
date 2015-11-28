@@ -12,6 +12,23 @@
 // 128px default ROI size
 #define DEFAULT_ROI_SIZE 128
 
+
+void AnnotatedImageFile::clampedUpdate(double updateX, double updateY) {
+    double new_x = ROI.x + updateX;
+    double new_y = ROI.y + updateY;
+    
+    // clamp it
+    new_x = max(0., min(width - ROI.w, new_x));
+    new_y = max(0., min(height - ROI.h, new_y));
+    
+    ROI.x = new_x;
+    ROI.y = new_y;
+    
+    if(parent)
+        parent->notifyChange();
+}
+
+
 // delete all allocated space
 void ImageBay::cleanUp() {
     if(!Images.empty())
@@ -28,7 +45,7 @@ void ImageBay::cleanUp() {
 // add image file to list
 void ImageBay::addFile(const QString sFileName) {
     
-    AnnotatedImageFile * aif = new AnnotatedImageFile;
+    AnnotatedImageFile * aif = new AnnotatedImageFile(this);
     
     aif->sFileName = sFileName;
     

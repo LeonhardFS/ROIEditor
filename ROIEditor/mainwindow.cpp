@@ -9,7 +9,7 @@ ui(new Ui::MainWindow)
     setAcceptDrops(true);
     setWindowTitle(tr("ROIEditor"));
     
-    // add status bar
+    // add status bar & widget
     statusBar = new QStatusBar;
     setStatusBar(statusBar);
     
@@ -19,6 +19,38 @@ ui(new Ui::MainWindow)
     
     statusImageInfo();
     roiDragEvent = false;
+    dispatchedClosing = false;
+    
+    
+    // add close slot
+    openAction = new QAction(this);
+    openAction->setText("Open");
+    openAction->setShortcut(QKeySequence::Open);
+    closeAction = new QAction(this);
+    closeAction->setText("Close editor");
+    closeAction->setShortcut(QKeySequence::Close);
+    saveAction = new QAction(this);
+    saveAction->setText("Save");
+    saveAction->setShortcut(QKeySequence::Save);
+    saveAsAction = new QAction(this);
+    saveAsAction->setText("Save As");
+    saveAsAction->setShortcut(QKeySequence::SaveAs);
+    
+    
+    connect(closeAction, SIGNAL(triggered()), this, SLOT(close()));
+    connect(openAction, SIGNAL(triggered()), this, SLOT(open()));
+    connect(saveAction, SIGNAL(triggered()), this, SLOT(save()));
+    connect(saveAsAction, SIGNAL(triggered()), this, SLOT(saveAs()));
+    
+    fileMenu = menuBar()->addMenu(tr("&File"));
+    fileMenu->addAction(openAction);
+    fileMenu->addSeparator();
+    fileMenu->addAction(saveAction);
+    fileMenu->addAction(saveAsAction);
+    fileMenu->addSeparator();
+    fileMenu->addAction(closeAction);
+    
+    
 }
 
 MainWindow::~MainWindow()
@@ -165,7 +197,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event) {
             
         }
     }
-
+    
 }
 
 void MainWindow::mouseMoveEvent(QMouseEvent *event) {
@@ -205,6 +237,63 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
             statusImageInfo();
         }
     }
-
+    
 }
 
+// check if changes occured
+bool MainWindow::okToContinue() {
+    if (imageBay.changed()) {
+        int r = QMessageBox::warning(this, tr("ROIEditor"),
+                                     tr("Data has been modified.\n"
+                                        "Do you want to save your changes?"),
+                                     QMessageBox::Yes | QMessageBox::No
+                                     | QMessageBox::Cancel);
+        if (r == QMessageBox::Yes) {
+            return save();
+        } else if (r == QMessageBox::Cancel) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// take into account that there might be changes that should be saved
+void MainWindow::closeEvent(QCloseEvent *event) {
+    if(!dispatchedClosing) {
+        if(okToContinue()) {
+            event->accept();
+            dispatchedClosing = true;
+        }
+        else
+            event->ignore();
+    }
+    else
+        event->accept();
+}
+
+// slots for saving/loading
+bool MainWindow::open() {
+    
+    if(okToContinue()) {
+        QString fileName = QFileDialog::getOpenFileName(this,
+                                                        tr("Open CSV file"), ".",
+                                                        tr("CSV files (*.csv)"));
+        if (!fileName.isEmpty())
+            loadFile(fileName);
+    }
+    return true;
+}
+bool MainWindow::save() {
+    return true;
+}
+bool MainWindow::saveAs() {
+    return true;
+}
+
+void MainWindow::loadFile(const QString &fileName) {
+    
+}
+
+void MainWindow::saveFile(const QString &fileName) {
+    
+}
