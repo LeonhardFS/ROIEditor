@@ -7,7 +7,11 @@
 //
 
 #include "ImageBay.h"
-
+#include "utils.h"
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <QDebug>
 
 // 128px default ROI size
 #define DEFAULT_ROI_SIZE 128
@@ -40,6 +44,9 @@ void ImageBay::cleanUp() {
                 ptr = NULL;
             }
         }
+    // clear vector
+    Images.clear();
+    changes = false;
 }
 
 // add image file to list
@@ -85,6 +92,82 @@ void ImageBay::addDirectory(const QString &sDir) {
             if(fileInfo.isDir())
                 addDirectory(fileInfo.absolutePath());
         }
+    }
+}
+
+// saving to CSV file
+void ImageBay::saveToCSV(const QString &sFileName) {
+    
+    string sep = ",";
+    
+    // format is
+    // x | y | w | h | imw | imh | filename | abs.path
+    ofstream ofs;
+    ofs.open(sFileName.toStdString().c_str());
+    // write header
+    ofs<< "x"<<sep<<"y"<<sep<<"w"<<sep<<"h"<<sep<<"imw"<<sep<<"imh"<<sep;
+    ofs<<"filename"<<sep<<"absolutepath"<<endl;
+    
+    if (!Images.empty()) {
+        for(vector<AnnotatedImageFile*>::const_iterator it = Images.begin();
+            it != Images.end(); ++it) {
+            
+            AnnotatedImageFile *aif = *it;
+            QFileInfo fileInfo(aif->sFileName);
+            
+            ofs<<(int)aif->ROI.x<<sep;
+            ofs<<(int)aif->ROI.y<<sep;
+            ofs<<(int)aif->ROI.w<<sep;
+            ofs<<(int)aif->ROI.h<<sep;
+            ofs<<(int)aif->width<<sep;
+            ofs<<(int)aif->height<<sep;
+            ofs<<fileInfo.fileName().toStdString()<<sep;
+            ofs<<fileInfo.filePath().toStdString()<<endl;
+        }
+    }
+    ofs.close();
+    
+    // file was saved, no changes!
+    changes = false;
+}
+
+// load data from csv
+void ImageBay::loadFromCSV(const QString &sFileName) {
+    // first clean up
+    cleanUp();
+    
+    // now load the data
+    ifstream ifs;
+    ifs.open(sFileName.toStdString().c_str());
+    
+    string line;
+    while(getline(ifs, line))
+    {
+        stringstream iss(line);
+        
+        // parse the csv row
+        vector<string> row;
+        string cell;
+        while(getline(iss, cell, ',' ) )
+            row.push_back(cell);
+        
+        // check if image file exists
+        if(fileExists(QString(row[7].c_str()))) {
+            
+            // add a new annotated image to list if it exists
+            AnnotatedImageFile *aif = new AnnotatedImageFile(this);
+            
+            aif->ROI.x = atoi(row[0].c_str());
+            aif->ROI.y = atoi(row[1].c_str());
+            aif->ROI.w = atoi(row[2].c_str());
+            aif->ROI.h = atoi(row[3].c_str());
+            aif->width = atoi(row[4].c_str());
+            aif->height = atoi(row[5].c_str());
+            aif->sFileName = QString(row[7].c_str());
+            
+            Images.push_back(aif);
+        }
+        
     }
 }
 

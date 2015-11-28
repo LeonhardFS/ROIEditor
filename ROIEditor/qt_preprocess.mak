@@ -37,36 +37,21 @@ compiler_moc_header_make_all: moc_mainwindow.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_mainwindow.cpp
 moc_mainwindow.cpp: /Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers/QDragEnterEvent \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers/qevent.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers/QMimeData \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers/qmimedata.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers/QFileInfo \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers/qfileinfo.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QMessageBox \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers/QDir \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers/qdir.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers/QPainter \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers/qpainter.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QStatusBar \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qstatusbar.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QMenu \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qmenu.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QMenuBar \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qmenubar.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/QFileDialog \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers/qfiledialog.h \
 		ImageBay.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers/QDirIterator \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers/qdiriterator.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers/QImageReader \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers/qimagereader.h \
 		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers/QDebug \
-		/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers/qdebug.h \
 		mainwindow.h
 	/Users/LeonhardS/Qt/5.5/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/LeonhardS/Qt/5.5/clang_64/mkspecs/macx-clang -I/Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor -I/Users/LeonhardS/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework/Headers -I/Users/LeonhardS/Qt/5.5/clang_64/lib/QtCore.framework/Headers -F/Users/LeonhardS/Qt/5.5/clang_64/lib mainwindow.h -o moc_mainwindow.cpp
 

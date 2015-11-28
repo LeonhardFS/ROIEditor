@@ -53,6 +53,9 @@ private:
     // workaround for qt double closing bug
     bool dispatchedClosing;
     
+    // was the file once saved?
+    QString fileName;
+    
     // index for the current image
     int curImageIndex;
     QPixmap curImage;
@@ -71,7 +74,7 @@ private:
     bool okToContinue();
 
     void loadFile(const QString& fileName);
-    void saveFile(const QString& fileName);
+    bool saveFile(const QString& fileName);
 protected:
     void dragEnterEvent(QDragEnterEvent *);
     void dropEvent(QDropEvent*);

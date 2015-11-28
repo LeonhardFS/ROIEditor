@@ -49,6 +49,7 @@
 		043BAC90FF7096E670256A74 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /Users/LeonhardS/Qt/5.5/clang_64/lib/QtGui.framework; sourceTree = "<absolute>"; };
 		0B911E191C08FD910074981F /* ImageBay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBay.h; sourceTree = SOURCE_ROOT; };
 		0B911E1A1C09050C0074981F /* ImageBay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageBay.cpp; sourceTree = SOURCE_ROOT; };
+		0BD40EF11C0966210031EFCB /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = SOURCE_ROOT; };
 		20D4DD19E38B9BD339AF3185 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/main.cpp; sourceTree = "<absolute>"; };
 		26812EF185AD3A679A20E0C8 /* ROIEditor.pro */ = {isa = PBXFileReference; lastKnownFileType = text; name = ROIEditor.pro; path = /Users/LeonhardS/Documents/CSE/GIT/ROIEditor/ROIEditor/ROIEditor.pro; sourceTree = "<absolute>"; };
 		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
@@ -110,6 +111,7 @@
 				92B4BE99235353128639060B /* mainwindow.h */,
 				0B911E191C08FD910074981F /* ImageBay.h */,
 				0B911E1A1C09050C0074981F /* ImageBay.cpp */,
+				0BD40EF11C0966210031EFCB /* utils.h */,
 			);
 			name = Sources;
 			sourceTree = "<Group>";

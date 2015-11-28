@@ -21,6 +21,8 @@ ui(new Ui::MainWindow)
     roiDragEvent = false;
     dispatchedClosing = false;
     
+    fileName = QString("");
+    
     
     // add close slot
     openAction = new QAction(this);
@@ -223,14 +225,14 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
     // are images already loaded?
     if(imageBay.count() > 0) {
         // goto next image via arrow keys
-        if(event->key() == Qt::Key_Right) {
+        if(event->key() == Qt::Key_Right || event->key() == Qt::Key_Up) {
             curImageIndex = (curImageIndex + 1) % imageBay.count();
             loadImage(imageBay.get(curImageIndex));
             update();
             statusImageInfo();
         }
         
-        if(event->key() == Qt::Key_Left) {
+        if(event->key() == Qt::Key_Left || event->key() == Qt::Key_Down) {
             curImageIndex = (curImageIndex - 1 + imageBay.count()) % imageBay.count();
             loadImage(imageBay.get(curImageIndex));
             update();
@@ -280,20 +282,50 @@ bool MainWindow::open() {
                                                         tr("CSV files (*.csv)"));
         if (!fileName.isEmpty())
             loadFile(fileName);
+        
+        // update internal filename
+        this->fileName = fileName;
     }
     return true;
 }
 bool MainWindow::save() {
+    
+    // does filename exist already?
+    if(fileName.length() > 0)
+        saveFile(fileName);
+    else
+        saveAs();
+    
     return true;
 }
 bool MainWindow::saveAs() {
-    return true;
+    QString fileName = QFileDialog::getSaveFileName(this,
+                                                    tr("Save CSV file"), ".",
+                                                    tr("CSV files (*.csv)"));
+
+    if (fileName.isEmpty())
+        return false;
+    
+    // update internal filename
+    this->fileName = fileName;
+    return saveFile(fileName);
 }
 
 void MainWindow::loadFile(const QString &fileName) {
+    // load data for ImageBay
+    imageBay.loadFromCSV(fileName);
     
+    // set to first picture
+    if(imageBay.count() > 0) {
+        curImageIndex = 0;
+        loadImage(imageBay.get(curImageIndex));
+    }
+    
+    // update image info on status bar
+    statusImageInfo();
 }
 
-void MainWindow::saveFile(const QString &fileName) {
-    
+bool MainWindow::saveFile(const QString &fileName) {
+    // call ImageBay saving function
+    imageBay.saveToCSV(fileName);
 }
