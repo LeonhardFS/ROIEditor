@@ -1,5 +1,6 @@
 # ROIEditor
-![Image of editor](https://raw.githubusercontent.com/LeonhardFS/ROIEditor/master/screen.jpg)
+![Image of editor](https://raw.githubusercontent.com/LeonhardFS/ROIEditor/master/screen.jpg)  
+
 ROIEditor (Region of Interst Editor) is a tiny little QT Application that lets you specify for a batch of pictures rectangular pixel regions of interest. The program was initially developed by me for a Computer Vision course as I needed to label >500 images and did not find fast enough a good tool. So I decided to code up a slim editor real quick. In the current early version the size of an ROI is fixed to 128x128px and there are no fancy image tools (resizing, cropping, zooming, scrolling). Those might be added in a future release.
 
 ## Usage
