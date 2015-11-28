@@ -7,9 +7,19 @@ Drag 'n' drop some picture files or a folder onto the program to have it assigne
 
 ## File format
 The editor exports all information into csv files (comma-separated) for easy access.
-| x | y | width | height | image width | image height| filename | abspath |
-|-- | - |----------- |-- | -- | --| -- | -- |
-| 200 | 200  | 128 | 128 | 947 | 650 | test.jpg | /usr/local/test.jpg |
+
+Region of interest:
+- x 
+- y 
+- width 
+- height 
+
+Image attributes:
+- image width 
+- image height
+- filename 
+- absolute path
+
 
 ## Binaries
 Currently I can only provide some MAC OS X binaries, which can be downloaded from 
