@@ -212,12 +212,17 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event) {
                                                    pos.y() - mouse_y);
         mouse_x = pos.x();
         mouse_y = pos.y();
+        
+        // temporarily set status bar to pixel coordinates
+        statusBar->showMessage(QString("(%1, %2, %3, %4)").arg(QString::number(imageBay.get(curImageIndex)->ROI.x), QString::number(imageBay.get(curImageIndex)->ROI.y),QString::number(imageBay.get(curImageIndex)->ROI.x + imageBay.get(curImageIndex)->ROI.w), QString::number(imageBay.get(curImageIndex)->ROI.y + imageBay.get(curImageIndex)->ROI.h)));
+        
         update();
     }
 }
 
 void MainWindow::mouseReleaseEvent(QMouseEvent *event) {
     roiDragEvent = false;
+    statusImageInfo();
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event) {

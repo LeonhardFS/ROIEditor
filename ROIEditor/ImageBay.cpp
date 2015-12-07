@@ -22,8 +22,8 @@ void AnnotatedImageFile::clampedUpdate(double updateX, double updateY) {
     double new_y = ROI.y + updateY;
     
     // clamp it
-    new_x = max(0., min(width - ROI.w, new_x));
-    new_y = max(0., min(height - ROI.h, new_y));
+    new_x = max(0., min(width - ROI.w - 1, new_x));
+    new_y = max(0., min(height - ROI.h - 1, new_y));
     
     ROI.x = new_x;
     ROI.y = new_y;
